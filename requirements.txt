@@ -1,0 +1,9 @@
+# Основные зависимости приложения
+telethon==1.34.0
+cryptography==42.0.0
+colorama==0.4.6
+pyfiglet==0.8.post1
+aiofiles==23.2.1
+
+# Для сборки через Buildozer (необязательно, но полезно)
+cython>=0.29.0
