@@ -1,0 +1,27 @@
+name: Build APK with Buildozer
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build with Buildozer
+        uses: artem-sedykh/buildozer-action@v1
+        with:
+          buildozer_version: stable
+          workdir: '.'
+          # Раскомментируйте строку ниже, если нужно увидеть детальный лог
+          # buildozer_params: '-v'
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: oblivion-reaper-apk
+          path: ./*.apk
