@@ -1,1 +1,3 @@
-
+# В Termux (не в proot) выполните:
+mkdir -p ~/OBLIVION_REAPER/assets
+touch ~/OBLIVION_REAPER/assets/icon.png
